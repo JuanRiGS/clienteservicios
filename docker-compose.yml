@@ -5,7 +5,7 @@ services:
     image: rafaelreyes/serviciospublicos
     build: ./serviciospublicos
     ports:
-      - 6060:80
+      - 6060:8080
     volumes:
       - .:/code/seviciospublicos
   routing:
@@ -18,7 +18,7 @@ services:
   dispatcher:
     image: heysson/conveniodispatcher
     build: ./conveniodispatcher
-    #ports:
-     # - 9003:80
+    ports:
+      - 9003:80
     volumes:
       - .:/code/conveniodispatcher
