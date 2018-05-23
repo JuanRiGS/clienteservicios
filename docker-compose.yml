@@ -5,7 +5,7 @@ services:
     image: rafaelreyes/serviciospublicos
     build: ./serviciospublicos
     ports:
-      - 9001:80
+      - 6060:80
     volumes:
       - .:/code/seviciospublicos
   routing:
