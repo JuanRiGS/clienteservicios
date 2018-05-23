@@ -1,11 +1,10 @@
-version: '2.1'
+version: '3'
 
 services:
   serviciospublicos:
-    image: rafaelreyes/serviciospublicos
-    build: ./serviciospublicos
+    image: rafaelreyes/serviciospublicos    
     ports:
-      - 6060:8080
+      - 8080:8080
     volumes:
       - .:/code/seviciospublicos
   routing:
