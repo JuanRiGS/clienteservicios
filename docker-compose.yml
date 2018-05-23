@@ -18,7 +18,7 @@ services:
   dispatcher:
     image: heysson/conveniodispatcher
     build: ./conveniodispatcher
-    ports:
-      - 9003:80
+    #ports:
+     # - 9003:80
     volumes:
       - .:/code/conveniodispatcher
