@@ -2,22 +2,28 @@ version: '3'
 
 services:
   serviciospublicos:
-    image: rafaelreyes/serviciospublicos    
+    image: rafaelreyes/serviciospublicos
+    hostname: service
     ports:
       - 8080:8080
+    netwok_mode: "host"
     volumes:
       - .:/code/seviciospublicos
   routing:
     image: juanrgs/routing
     build: ./routing
+    hostname: routing
     ports:
       - 9002:80
+    netwok_mode: "host"
     volumes:
       - .:/code/routing
   dispatcher:
     image: heysson/conveniodispatcher
     build: ./conveniodispatcher
+    hostname: dispacher
     ports:
       - 9003:80
+    netwok_mode: "host"
     volumes:
       - .:/code/conveniodispatcher
