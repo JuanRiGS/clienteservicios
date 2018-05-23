@@ -1,0 +1,24 @@
+version: '2.1'
+
+services:
+  serviciospublicos:
+    image: rafaelreyes/serviciospublicos
+    build: ./serviciospublicos
+    ports:
+      - 9001:80
+    volumes:
+      - .:/code/seviciospublicos
+  routing:
+    image: juanrgs/routing
+    build: ./routing
+    ports:
+      - 9002:80
+    volumes:
+      - .:/code/routing
+  dispatcher:
+    image: heysson/conveniodispatcher
+    build: ./conveniodispatcher
+    ports:
+      - 9003:80
+    volumes:
+      - .:/code/conveniodispatcher
