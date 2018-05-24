@@ -9,6 +9,9 @@ services:
     netwok_mode: "host"
     volumes:
       - .:/code/seviciospublicos
+    networks:
+    modval_net:
+      ipv4_address: '192.168.1.101'
   routing:
     image: juanrgs/routing
     build: ./routing
@@ -18,6 +21,9 @@ services:
     netwok_mode: "host"
     volumes:
       - .:/code/routing
+    networks:
+    modval_net:
+      ipv4_address: '192.168.1.102'
   dispatcher:
     image: heysson/conveniodispatcher
     build: ./conveniodispatcher
@@ -27,3 +33,15 @@ services:
     netwok_mode: "host"
     volumes:
       - .:/code/conveniodispatcher
+    networks:
+    modval_net:
+      ipv4_address: '192.168.1.102'
+      
+
+networks:
+  modelado_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.1.0/24
