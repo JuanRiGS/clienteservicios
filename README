@@ -9,7 +9,7 @@ Desiciones de Arquitectura
 
 Uso de Kafka como implementacion de patron publish and suscribe para la transferencia de solicitudes del servicio de negocio
 
-Implementacion de patron routing para obtener la informacion del servicio destino a ser consumido por medio del dispacher
+Implementacion de patron intermediate routing para obtener la informacion del servicio destino a ser consumido por medio del dispacher
 
 Implementacion de un dispacher para realizar la comunicacion entre la solicitud de negocio y el servicio del convenio
 
