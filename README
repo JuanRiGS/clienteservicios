@@ -5,16 +5,21 @@
 > zookeeper contiene el programa zookeeper en caso de requerirlo
 > router quedo para que se pueda guardar el router realizado
 
+
 Desiciones de Arquitectura
 
-Uso de Kafka como implementacion de patron publish and suscribe para la transferencia de solicitudes del servicio de negocio
+-Uso de Kafka como implementacion de patron publish and suscribe para la transferencia de solicitudes del servicio de negocio
 
-Implementacion de patron intermediate routing para obtener la informacion del servicio destino a ser consumido por medio del dispacher
+-Implementacion de patron intermediate routing para obtener la informacion del servicio destino a ser consumido por medio del dispacher
 
-Implementacion de un dispacher para realizar la comunicacion entre la solicitud de negocio y el servicio del convenio
+-Implementacion de un dispacher para realizar la comunicacion entre la solicitud de negocio y el servicio del convenio
 
-componentes Dispacher y servicios implementa el patron observer para deteccion del cambios de estado en la colas de mensajeria 
+-componentes Dispacher y servicios implementa el patron observer para deteccion del cambios de estado en la colas de mensajeria 
 de los topicos de kafka tanto para producer como para consumer
 
 
-
+Inventario de Servicios  DOMINIO
+-Servicio Negocio(Pago, Consulta, Devolucion)
+-Servicio Routing(ConsultarConvenio, AgregarConvenio)
+-Servicio SOAP convenio
+-Servicios REST Convenio
